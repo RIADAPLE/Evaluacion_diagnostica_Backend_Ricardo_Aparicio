@@ -12,7 +12,7 @@ public class Main {
         monitor1.Monitor("Acer",22);
         teclado1.Teclado("Teclado","MSI");
         raton1.Raton("Raton","Logitech");
-        computadora1.Computadora("HP",monitor1,teclado1,raton1);
+        computadora1.Computadora("HP",monitor1,teclado1,raton1,600);
 
         Computadora computadora2 = new Computadora();
         Monitor monitor2 = new Monitor();
@@ -22,7 +22,7 @@ public class Main {
         monitor2.Monitor("HP",24);
         teclado2.Teclado("Teclado","Razer");
         raton2.Raton("Raton","Hyper x");
-        computadora2.Computadora("DELL",monitor2,teclado2,raton2);
+        computadora2.Computadora("DELL",monitor2,teclado2,raton2,500);
 
         Computadora computadora3 = new Computadora();
         Monitor monitor3 = new Monitor();
@@ -32,7 +32,7 @@ public class Main {
         monitor3.Monitor("MSI",24);
         teclado3.Teclado("Teclado","Dragon red");
         raton3.Raton("Raton","Xtech");
-        computadora3.Computadora("Clon",monitor3,teclado3,raton3);
+        computadora3.Computadora("Clon",monitor3,teclado3,raton3,800);
 
         //computadora1.toString();
         Orden orden1 = new Orden(3);

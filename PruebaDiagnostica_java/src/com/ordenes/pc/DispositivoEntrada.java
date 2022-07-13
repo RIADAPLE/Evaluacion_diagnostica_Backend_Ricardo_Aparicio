@@ -12,4 +12,20 @@ public class DispositivoEntrada {
     public String toString1(){
         return "\tTipo de entrada: "+this.tipoEntrada + "\n\tmarca: " + this.marca;
     }
+
+    public String getTipoEntrada() {
+        return tipoEntrada;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setTipoEntrada(String tipoEntrada) {
+        this.tipoEntrada = tipoEntrada;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
 }

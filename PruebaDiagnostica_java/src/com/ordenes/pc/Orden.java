@@ -9,6 +9,7 @@ public class Orden {
     private int contadorComputadoras;
     private int maxComputadoras;
 
+
     public Orden(int maxComputadoras){
         idOrden = ++contadorOrdenes;
         contadorComputadoras = 0;
@@ -28,11 +29,15 @@ public class Orden {
     }
 
     public double calcularTotal(){
-        return (long) computadoras.size();
+        double total = 0;
+        for (int i = 0; i < computadoras.size(); i++) {
+            total += computadoras.get(i).getPrecio();
+        }
+        return total;
     }
 
     public void mostrarOrden(){
-        System.out.println("\nOrden " + idOrden + "\nContador de ordenes: " + contadorOrdenes + "\nTotal de computadoras: "+ calcularTotal() + "\nMaximo de computadoras: "+maxComputadoras);
+        System.out.println("\nOrden " + idOrden + "\nContador de ordenes: " + contadorOrdenes + "\nTotal de computadoras: " + computadoras.size() + "\nPrecio total: $" +calcularTotal() + "\nMaximo de computadoras: "+maxComputadoras);
         for (int i = 0; i < computadoras.size(); i++) {
             System.out.println(computadoras.get(i));
         }
