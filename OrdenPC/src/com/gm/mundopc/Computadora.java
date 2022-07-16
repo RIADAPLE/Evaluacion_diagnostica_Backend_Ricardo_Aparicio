@@ -1,29 +1,24 @@
-package com.ordenes.pc;
+package com.gm.mundopc;
 
 public class Computadora {
+
     private int idComputadora;
     private static int contadorComputadora;
     private String nombre;
     private Monitor monitor;
     private Teclado teclado;
     private Raton raton;
-    private double precio;
 
-    public Computadora(){
-
-    }
-
-    public void Computadora(String nombre, Monitor monitor, Teclado teclado, Raton raton, double precio){
+    private Computadora(){
         idComputadora = ++contadorComputadora;
-        this.nombre = nombre ;
-        this.monitor = monitor;
-        this.teclado = teclado;
-        this.raton = raton;
-        this.precio = precio;
     }
 
-    public String toString(){
-        return "Computadora:\nid: "+ idComputadora + "\nNombre: "+ nombre + "\nPrecio: $" + precio + "\nMonitor[\n"+this.monitor.toString()+"\n]"+"\nTeclado[\n"+this.teclado.toString()+"\n]"+"\nRaton[\n"+this.raton.toString()+"\n]";
+    public Computadora(String nombre, Monitor monitor, Teclado teclado, Raton raton){
+        this();
+        this.nombre = nombre;
+        this.monitor = monitor;
+        this.raton = raton;
+        this.teclado = teclado;
     }
 
     public int getIdComputadora() {
@@ -50,18 +45,6 @@ public class Computadora {
         return raton;
     }
 
-    public double getPrecio() {
-        return precio;
-    }
-
-    public void setIdComputadora(int idComputadora) {
-        this.idComputadora = idComputadora;
-    }
-
-    public static void setContadorComputadora(int contadorComputadora) {
-        Computadora.contadorComputadora = contadorComputadora;
-    }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -78,7 +61,14 @@ public class Computadora {
         this.raton = raton;
     }
 
-    public void setPrecio(double precio) {
-        this.precio = precio;
+    @Override
+    public String toString() {
+        return "Computadora{" +
+                "idComputadora=" + idComputadora +
+                ", nombre='" + nombre + '\'' +
+                ", monitor=" + monitor +
+                ", teclado=" + teclado +
+                ", raton=" + raton +
+                '}';
     }
 }
