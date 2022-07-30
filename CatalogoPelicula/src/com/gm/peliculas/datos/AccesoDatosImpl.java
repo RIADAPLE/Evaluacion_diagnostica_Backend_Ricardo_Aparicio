@@ -51,16 +51,44 @@ public class AccesoDatosImpl implements AccesoDatos {
 
     @Override
     public String buscar(String nombreArchivo, String buscar) throws LecuraDatosEx {
-        return null;
+        File archivo = new File(nombreArchivo);
+        String resultado = null;
+        try {
+            BufferedReader entrada = new BufferedReader(new FileReader(archivo));
+            String linea = null;
+            int i = 0;
+            linea = entrada.readLine();
+            while (linea != null) {
+                if( buscar != null && buscar.equalsIgnoreCase(linea)){
+                    resultado = "Pelicula " + linea + " encontrada en indice " + i;
+                    break;
+                }
+                linea = entrada.readLine();
+                i++;
+            }
+            entrada.close();
+        } catch(IOException ex) {
+            ex.printStackTrace();
+        }
+        return resultado;
     }
 
     @Override
     public void crear(String nombreArchivo) throws AccesoDatosEx {
-
+        File archivo = new File(nombreArchivo);
+        try {
+            PrintWriter salida = new PrintWriter(new FileWriter(archivo));
+            salida.close();
+            System.out.println("Se ha creado el archivo correctamente");
+        } catch(IOException ex) {
+            ex.printStackTrace();
+        }
     }
 
     @Override
     public void borrar(String nombreArchivo) throws AccesoDatosEx {
-
+        File archivo = new File(nombreArchivo);
+        archivo.delete();
+        System.out.println("Se ha borrado el archivo correctamente");
     }
 }
