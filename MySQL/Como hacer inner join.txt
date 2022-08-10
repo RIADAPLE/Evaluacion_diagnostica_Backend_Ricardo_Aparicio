@@ -1,0 +1,2 @@
+SELECT * FROM hibernate.productos as p
+inner join categorias as c on (p.categoria_id=c.id);
