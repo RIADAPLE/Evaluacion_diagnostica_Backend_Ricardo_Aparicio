@@ -9,7 +9,7 @@ import java.util.List;
 
 @RequestScoped
 public class CursoRepositoryImpl implements CursoRepository{
-    @Inject
+    @PersistenceContext(name="ejemploJpa")
     private EntityManager em;
 
     @Override
