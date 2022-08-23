@@ -1,0 +1,7 @@
+org\example\webapp\jaxws\repository\CursoRepository.class
+org\example\webapp\jaxws\repository\CursoRepositoryImpl.class
+org\example\webapp\jaxws\controllers\CursoRestController.class
+org\example\webapp\jaxws\models\Curso.class
+org\example\webapp\jaxws\services\CursoService.class
+org\example\webapp\jaxws\ProducerEntityManager.class
+org\example\webapp\jaxws\services\CursoServiceImpl.class
