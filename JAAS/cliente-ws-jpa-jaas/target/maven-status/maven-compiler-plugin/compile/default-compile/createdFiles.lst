@@ -1,0 +1,10 @@
+org\example\webapp\jaxws\services\CursoServicioWsImplService.class
+org\example\webapp\jaxws\services\Guardar.class
+org\example\webapp\jaxws\services\CursoServicioWs.class
+org\example\webapp\jaxws\services\Listar.class
+org\example\cliente\ws\jpa\Main.class
+org\example\webapp\jaxws\services\GuardarResponse.class
+org\example\webapp\jaxws\services\package-info.class
+org\example\webapp\jaxws\services\ListarResponse.class
+org\example\webapp\jaxws\services\Curso.class
+org\example\webapp\jaxws\services\ObjectFactory.class
