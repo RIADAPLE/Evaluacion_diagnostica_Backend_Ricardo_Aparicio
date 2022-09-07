@@ -26,7 +26,7 @@ public class EmpleadoComandos implements CommandLineRunner {
         Persona empleado = new Empleado(null,"Josu","Ramirez","33333333",direccion,new BigDecimal(String.valueOf(2500)), TipoEmpleado.ADMINISTRATIVO);
         Persona save = personaDAO.save(empleado);
         System.out.println(save.toString());*/
-        Iterable<Persona> empleadoEnum = ((EmpleadoDAO)personaDAO).findEmpleadoByTipoEmpleado(TipoEmpleado.ADMINISTRATIVO);
-        empleadoEnum.forEach(System.out::println);
+        /*Iterable<Persona> empleadoEnum = ((EmpleadoDAO)personaDAO).findEmpleadoByTipoEmpleado(TipoEmpleado.ADMINISTRATIVO);
+        empleadoEnum.forEach(System.out::println);*/
     }
 }

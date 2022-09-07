@@ -25,7 +25,7 @@ public class AlumnosCommand implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
 
-        Iterable<Persona> alumnos = personaDAO.findAll();
+        //Iterable<Persona> alumnos = personaDAO.findAll();
         /*alumnos.forEach(alumno ->((Alumno)alumno).setCarrera(ingSistemas.get()));
         alumnos.forEach(alumno -> personaDAO.save(alumno));*/
 
