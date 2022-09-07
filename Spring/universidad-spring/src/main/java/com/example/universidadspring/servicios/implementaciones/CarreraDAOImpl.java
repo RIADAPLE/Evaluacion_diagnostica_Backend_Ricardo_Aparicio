@@ -9,31 +9,33 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 @Service
-public class CarreraDAOImpl implements CarreraDAO {
+public class CarreraDAOImpl extends GenericDAOimpl<Carrera, CarreraRepository> implements CarreraDAO {
     @Autowired
-    private CarreraRepository repository;
-
-    @Override
-    @Transactional(readOnly = true)
-    public Optional<Carrera> findById(Integer id) {
-        return repository.findById(id);
-    }
-
-    @Override
-    @Transactional
-    public Carrera save(Carrera carrera) {
-        return repository.save(carrera);
+    public CarreraDAOImpl(CarreraRepository repository) {
+        super(repository);
     }
 
     @Override
     @Transactional(readOnly = true)
-    public Iterable<Carrera> findAll() {
-        return repository.findAll();
+    public Iterable<Carrera> findCarreraByNombreContains(String nombre) {
+        return repository.findCarreraByNombreContains(nombre);
     }
 
     @Override
-    @Transactional
-    public void deleteById(Integer id) {
-        repository.deleteById(id);
+    @Transactional(readOnly = true)
+    public Iterable<Carrera> findCarreraByNombreContainsIgnoreCase(String nombre) {
+        return repository.findCarreraByNombreContainsIgnoreCase(nombre);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Iterable<Carrera> findCarreraByCantidadAnios(Integer cantidadAnios) {
+        return repository.findCarreraByCantidadAnios(cantidadAnios);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Iterable<Carrera> buscarCarrerasPorProfesorNombreYApellido(String nombre, String apellido){
+        return repository.buscarCarrerasPorProfesorNombreYApellido(nombre, apellido);
     }
 }
