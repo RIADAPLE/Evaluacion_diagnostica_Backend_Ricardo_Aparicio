@@ -26,7 +26,6 @@ public class Carrera implements Serializable {
     @Column(name = "fecha_modificacion")
     private LocalDateTime fechaModificacion;
 
-    @JsonIgnore
     @JsonIgnoreProperties({"carrera"})
     @OneToMany(
             mappedBy = "carrera",

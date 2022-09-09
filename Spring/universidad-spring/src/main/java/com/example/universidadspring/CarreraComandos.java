@@ -43,5 +43,10 @@ public class CarreraComandos implements CommandLineRunner {
         System.out.println("\n------ Por cantidad de anios 5 ------");
         List<Carrera> carrerasCantidadAnios = (List<Carrera>) servicio.findCarreraByCantidadAnios(5);
         carrerasCantidadAnios.forEach(System.out::println);*/
+
+        System.out.println("\n------ Find carrera by Nombre y apellido ------");
+        List<Carrera> carrerasCantidadAnios = (List<Carrera>) servicio.buscarCarrerasPorProfesorNombreYApellido("Ricardo","Aparicio");
+        System.out.println();
+        carrerasCantidadAnios.forEach(System.out::println);
     }
 }
